@@ -4,7 +4,9 @@ import Cookies from 'universal-cookie';
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './'
 
-const Sidebar = () => {
+const cookies = new Cookies();
+
+const Sidebar = ({ logout }) => {
     return (
         <div className='channel-list__sidebar'>
             <div className='channel-list__sidebar__icon1'>
@@ -13,7 +15,7 @@ const Sidebar = () => {
                 </div>
             </div>
             <div className='channel-list__sidebar__icon2'>
-                <div className='icon1__inner'>
+                <div className='icon1__inner' onClick={logout}>
                     <img src='' width={30} alt='Logout'></img>
                 </div>
             </div>
@@ -30,9 +32,22 @@ const CompanyHeader = () => {
 }
 
 const ChannelListContainer = () => {
+    const logout = () => {
+        cookies.remove('token');
+        cookies.remove('userId');
+        cookies.remove('username');
+        cookies.remove('fullName');
+        cookies.remove('avatarURL');
+        cookies.remove('hashedPassword');
+        cookies.remove('phoneNumber');
+
+        window.location.reload();
+
+    }
+
     return (
         <>
-            <Sidebar />
+            <Sidebar logout={logout} />
             <div className='channel-list__list__wrapper'>
                 <CompanyHeader />
                 <ChannelSearch />
