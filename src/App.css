@@ -199,6 +199,7 @@
   }
   
   .str-chat-channel-list {
+    background-color: var(--primary-color);
     height: fit-content;
     margin-bottom: 8px;
   }

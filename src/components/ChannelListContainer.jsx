@@ -59,6 +59,7 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
                 <CompanyHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
                 <ChannelList
+                EmptyStateIndicator={() => (<p>empty</p>)}
                     filters={filters}
                     channelRenderFilterFn={customChannelTeamFilter}
                     List={(listProps) => (
