@@ -5,6 +5,8 @@ import { UserList } from './';
 import { CloseIcon } from 'stream-chat-react';
 
 const ChannelNameInput = ({ channelName = '', setChannelName }) => {
+  const { client, setActiveChannel } = useChatContext();
+  const [selectedUsers, setselectedUsers] = useState([client.userID || '']);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const CreateChannel = ({ createType, setIsCreating }) => {
         <CloseIcon setIsCreating={setIsCreating}/>
       </div>
       {createType === 'team' && <ChannelNameInput channelName={channelName} setChannelName={setChannelName} />}
-      <UserList />
+      <UserList setSelectedUsers={setSelectedUsers}/>
     </div>
   )
 }
