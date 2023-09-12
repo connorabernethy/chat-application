@@ -6,8 +6,5 @@ This application is a real-time chatting application with authenticated users. I
 ## Backend
 The backend uses Express, Axios, BCrypt, and StreamChat.
 
-## Deployment
-Planning on deploying through Vercel.
-
 ## Link
 Check out the application here []()
