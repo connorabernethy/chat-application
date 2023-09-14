@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
+import { SelectedCheckmark } from '../assets/SelectedCheckmark';
 
 //import { InviteIcon } from '../assets';
 
@@ -34,7 +35,7 @@ const UserItem = ({ user, setSelectedUsers }) => {
               <Avatar image={user.image} name={user.fullName || user.id} size={32} />
               <p className="user-item__name">{user.fullName || user.id}</p>
           </div>
-          {selected ? <button /> : <div className="user-item__invite-empty" />}
+          {selected ? <SelectedCheckmark /> : <div className="user-item__invite-empty" />}
       </div>
   )
 }
