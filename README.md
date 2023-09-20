@@ -10,7 +10,8 @@ The backend uses Express, Axios, BCrypt, and StreamChat.
 - Add Edit Channel Functionality
 - Record Demo Video before 30-day trial expires
 - Extend theme to include dark mode
-- Adjust theming
+- Adjust theming from blue / purple to other color variants
+- Add user preferences through StreamChat
 
 ## Link
 Check out the application here []()
