@@ -7,7 +7,6 @@ This application is a real-time chatting application with authenticated users. I
 The backend uses Express, Axios, BCrypt, and StreamChat.
 
 ## TODO
-- Add Edit Channel Functionality
 - Record Demo Video before 30-day trial expires
 - Extend theme to include dark mode
 - Adjust theming from blue / purple to other color variants
